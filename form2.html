@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrasi</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container{
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            width: 400px;
+            max-width: 100%;
+        }
+        .header{
+            background-color: #f7f7f7;
+            border-bottom: 1px solid #f0f0f0;
+            padding: 20px 40px;
+        }
+        .header h2{
+            margin: 0;
+        }
+        .form{
+            padding: 30px 40px;
+        }
+        .form_control{
+            margin-bottom: 10px;
+            padding-bottom: 20px;
+            position: relative;
+        }
+        .form_control label{
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+        .form_control input{
+            border: 2px solid #f0f0f0;
+            border-radius: 5px;
+            display: block;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 14px;
+            width: 100%;
+            padding: 10px;
+        }
+        .form_control.success input{
+            border-color: #2ecc71;
+        }
+        .form_control.error input{
+            border-color: #e74c3c;
+        }
+        .form_control i{
+            position: absolute;
+            top: 40px;
+            right: 10px;
+            visibility: hidden;
+        }
+        .form_control.success i.fas fa-check-circle{
+            color: #2ecc71;
+            visibility: visible;
+        }
+        .form_control.error i.fas fa-exclamation-circle{
+            color: #e74c3c;
+            visibility: visible;
+        }
+        .form_control small{
+            visibility: hidden;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        .form_control.error small{
+            color: #e74c3c;
+            visibility: visible;
+        }
+        .form button{
+            background-color: #925c21;
+            border: 2px solid #925c21;
+            border-radius: 4px;
+            color: #fff;
+            display: block;
+            font-size: 16px;
+            padding: 10px;
+            width: 100%;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Create Account</h2>
+        </div>
+        <form class="form" id="form">
+            <div class="form_control" >
+                <label>Nama lengkap</label>
+                <input type="text" placeholder="Myname.." id="Username">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+
+            <div class="form_control" >
+                <label>Alamat</label>
+                <input type="text" placeholder="Address..." id="Alamat">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+
+            <div class="form_control" >
+                <label>Tanggal Lahir</label>
+                <input type="date" id="Tanggal">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            
+            <div class="form_control">
+                <label>Email</label>
+                <input type="text" placeholder="hello@user.com" id="Email">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+
+            <div class="form_control">
+                <label>Password</label>
+                <input type="password" placeholder="password.." id="Password">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form_control">
+                <label>Upload Gambar</label>
+                <input type="file" id="Gambar">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <button type="submit">submit</button>
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
